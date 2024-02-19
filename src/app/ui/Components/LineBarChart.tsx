@@ -58,8 +58,8 @@ export function LineBarChart() {
         fontSize={12}
         height={60}
       />
-      <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
-      <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
+      <YAxis yAxisId="left" orientation="left" />
+      <YAxis yAxisId="right" orientation="right" />
       <Tooltip />
       <Legend verticalAlign="top" style={{ color: "black" }} />
       <defs>
@@ -87,6 +87,7 @@ export function LineBarChart() {
         barSize={30}
         fill="url(#myBuys)"
         name="Total Buys"
+        // label={{ position: "top" }}
       />
       <Line
         type="monotone"

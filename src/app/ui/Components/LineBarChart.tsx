@@ -14,8 +14,11 @@ import ws from "../../../../public/walletSummary.json";
 
 const _data = Object.keys(ws.totalBuySellTimes.month).map((itm) => ({
   name: itm,
-  totalTimes: ws.totalBuySellTimes.month[itm] as string,
+  // @ts-ignore
+  totalTimes: ws.totalBuySellTimes.month[itm],
+  // @ts-ignore
   totalBuy: ws.totalBuyAmounts.month[itm],
+  // @ts-ignore
   totalSell: ws.totalSellAmounts.month[itm],
 }));
 
